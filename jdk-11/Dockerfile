@@ -3,7 +3,7 @@ FROM gradle:jdk11
 RUN apt-get update -qqy  && apt-get install -y gnupg2
 # Google Chrome
 
-ARG CHROME_VERSION=83.0.4103.61-1
+ARG CHROME_VERSION=83.0.4103.116-1
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
 	&& echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
 	&& apt-get -qqy install google-chrome-stable=$CHROME_VERSION \
