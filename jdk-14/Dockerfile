@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-14
+FROM gradle:jdk11
 
 # Google Chrome
 
