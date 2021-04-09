@@ -18,7 +18,7 @@ ENV GRADLE_USER_HOME /cache
 ENV PATH $PATH:$GRADLE_HOME/bin
 # Google Chrome
 
-ARG CHROME_VERSION=83.0.4103.116-1
+ARG CHROME_VERSION=89.0.4389.114-1
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
 	&& echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
 	&& apt-get update -qqy \
@@ -29,7 +29,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=83.0.4103.39
+ARG CHROME_DRIVER_VERSION=89.0.4389.114
 RUN wget -q -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
 	&& rm /tmp/chromedriver.zip \
